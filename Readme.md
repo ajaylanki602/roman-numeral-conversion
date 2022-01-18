@@ -1,10 +1,6 @@
 # roman-numeral-conversion
 Adobe AEM take home assessment
 
-
-## Index 
-
-
 ## 1. Goals
 
 Implementing HTTP Endpoint which must accept a URI in this format: http://localhost:8080/romannumeral?query={integer}
