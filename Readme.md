@@ -60,7 +60,7 @@ replace '{integer}' with any integer number between 1 and 3999 (included)`
    
      docker pull roman-numeral-conversion-0.0.1-SNAPSHOT
    
-   map ports 8080 from host to 8080 in the container
+   map port 8080 from host to 8080 in the container
    
      docker run -p 8080:8080 ajaykumarl/roman-numeral-conversion
  
@@ -81,14 +81,14 @@ replace '{integer}' with any integer number between 1 and 3999 (included)`
  1. Given an Integer input within the range 1-3999, HTTP response (JSON format) with input (Integer) and output (Roman value) attributes should be returned.
  2. Implementing DevOps capabilities which includes building docker image, monitoring capabilities, accessing metrics etc.
 
-### Step 2: Design considerations  
+### Step 2: Design/Technology considerations  
 
    Java 8 and Springboot are used in the development of this application as springboot (in addition to providing embedded server which eliminates deployment of war) provides many production-ready features such as
    1. actuator which provides endpoints to monitor and interact with the application, 
    2. Auto-configuration for an application metrics facade that supports numerous monitoring systems such as Datadog, Dynatrace, New Relic etc., 
    3. ability to view and configure the log levels of application at run time.
    
-### Step 3: Test cases and development  
+### Step 3: Test cases
 
  Implemented test cases at both controller and service level. All the edge cases like, input number 0, negative numbers and strings containing alphabets are tested using junit
 
@@ -99,7 +99,7 @@ replace '{integer}' with any integer number between 1 and 3999 (included)`
  In order to access packaging layout, please access index.html located at roman-numeral-conversion/doc/index.html
 
 
-## 6. Error handling
+## 6. Error/Exception handling
 
 ### Query value is blank/empty
 
@@ -216,7 +216,7 @@ Health check response received by accessing /actuator/health looks as below
 	}	
 
 
-## 9. Containerization and Metrics
+## 9. Containerization
 
   I used docker for containerization. This would be useful during CI/CD process where we can easily push the docker image to repository. I've generated the image and pushed it to docker hub.
 
