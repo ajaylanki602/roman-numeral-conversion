@@ -63,7 +63,7 @@ replace '{integer}' with any integer number between 1 and 3999 (included)`
    
    map port 8080 from host to 8080 (port on which the application is running) in the container
    
-     docker run -p 8080:8080 ajaykumarl/roman-numeral-conversion
+     docker run -p 8080:8080 ajaylanki602/roman-numeral-conversion
  
  This will start the container and expose the api on the above ports
  
@@ -223,9 +223,9 @@ Health check response received by accessing /actuator/health looks as below
 
 Commands to create a docker image inside the project folder :
 	
-	mvn clean package && docker image build -t ajaykumarl/roman-numeral-conversion
+	mvn clean package && docker image build -t ajaylanki602/roman-numeral-conversion
   
-	docker push ajaykumarl/roman-numeral-conversion
+	docker push ajaylanki602/roman-numeral-conversion
 
 
 ## 10. References
