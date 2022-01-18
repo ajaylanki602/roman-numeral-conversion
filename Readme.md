@@ -37,7 +37,8 @@ To build the project, run the following command
     mvn clean install
 
 Once the command is successfully run and the target folder is created with the roman-numeral-conversion-0.0.1-SNAPSHOT.jar
-    cd target
+    
+	cd target
 
 run the jar file using java -jar and the name of the snapshot.Here it is 
 "roman-numeral-conversion-0.0.1-SNAPSHOT.jar"
@@ -60,7 +61,7 @@ replace '{integer}' with any integer number between 1 and 3999 (included)`
    
      docker pull roman-numeral-conversion-0.0.1-SNAPSHOT
    
-   map port 8080 from host to 8080 in the container
+   map port 8080 from host to 8080 (port on which the application is running) in the container
    
      docker run -p 8080:8080 ajaykumarl/roman-numeral-conversion
  
@@ -101,7 +102,7 @@ replace '{integer}' with any integer number between 1 and 3999 (included)`
 
 ## 6. Error/Exception handling
 
-### Query value is blank/empty
+#### Query value is blank/empty
 
 The server will return a 400 ( BAD_REQUEST ) status code along with a json object:
 
@@ -112,7 +113,7 @@ The server will return a 400 ( BAD_REQUEST ) status code along with a json objec
 	}
 
 
-### Query value is 0
+#### Query value is 0
   
 The server will return a 400 ( BAD_REQUEST ) status code along with a json object:
 
@@ -123,7 +124,7 @@ The server will return a 400 ( BAD_REQUEST ) status code along with a json objec
     }
 
 
-### Query value is not in range
+#### Query value is not in range
 
 The server will return a 400 ( BAD_REQUEST ) status code along with a json object:
 
@@ -134,7 +135,7 @@ The server will return a 400 ( BAD_REQUEST ) status code along with a json objec
     }
  
  
-### Query value is not an integer
+#### Query value is not an integer
 
 The server will return a 400 ( BAD_REQUEST ) status code along with a json object:
 
@@ -229,9 +230,11 @@ Commands to create a docker image inside the project folder :
 
 ## 10. References
 
-https://start.spring.io/ to create spring boot project with required dependencies
-https://editor.swagger.io/ to generate swagger.yaml file.
-https://www.calculatorsoup.com/calculators/conversions/roman-numeral-converter.php - for integer to roman validations
+ [Spring IO](https://start.spring.io/) - To create spring boot project with required dependencies 
+ 
+ [Swagger UI](https://editor.swagger.io/) - To generate swagger.yaml file.
+ 
+ [Integer to roman conversion validation](https://www.calculatorsoup.com/calculators/conversions/roman-numeral-converter.php) - for integer to roman validations
 
 
 

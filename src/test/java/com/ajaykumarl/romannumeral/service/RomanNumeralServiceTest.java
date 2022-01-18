@@ -12,9 +12,16 @@ import com.ajaykumarl.romannumeral.errorHandling.NumberIsZeroException;
 import com.ajaykumarl.romannumeral.errorHandling.NumberNotInRangeException;
 import com.ajaykumarl.romannumeral.model.RomanNumber;
 
+/**
+ * @author ajayl
+ *
+ */
 @ExtendWith(MockitoExtension.class)
 public class RomanNumeralServiceTest {
 	
+	/**
+	 *  RomanNumeralConversionService mock
+	 */
 	@InjectMocks
 	private RomanNumeralConversionService romanNumeralConversionService = new RomanNumeralConversionService();
 	
