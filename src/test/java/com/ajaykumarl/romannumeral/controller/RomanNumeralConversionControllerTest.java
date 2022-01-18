@@ -50,7 +50,7 @@ public class RomanNumeralConversionControllerTest {
 		  mockMvc.perform(get("/romannumeral")
 				  .queryParam("query", "-a123"))
 		  		  .andExpect(status().isBadRequest())
-		  		  .andExpect(jsonPath("$.errors[0]").value("Number format error occured. Input entered is not a valid number"));
+		  		  .andExpect(jsonPath("$.message").value("Number format error occured. Input entered is not a valid number"));
 		  }
 	  
 	  @Test 
@@ -59,7 +59,7 @@ public class RomanNumeralConversionControllerTest {
 		  mockMvc.perform(get("/romannumeral")
 				  .queryParam("query", ""))
 		  		  .andExpect(status().isBadRequest())
-		  		  .andExpect(jsonPath("$.errors[0]").value("toRomanNumber.param: must not be blank"));
+		  		  .andExpect(jsonPath("$.message").value("Query param cannot be empty"));
 		  }
 
 
